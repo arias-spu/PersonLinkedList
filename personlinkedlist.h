@@ -12,7 +12,7 @@ class PersonLinkedList{
 	struct Node{
 		Person* data;
 		Node* next;
-		Node* prev;
+//		Node* prev; This is part of your project!
 	};
 	Node* _head;
 	size_t _size;
@@ -21,8 +21,8 @@ class PersonLinkedList{
 public:
 	PersonLinkedList();
 	~PersonLinkedList();
-	void LoadFromStream(istream&);
-	void SaveToStream(ostream&)const;
+	size_t LoadFromStream(istream&);
+	size_t SaveToStream(ostream&)const;
 	bool Insert(Person*, size_t);
 	bool Insert(const string&, size_t);
 	Person* Get(size_t)const;
