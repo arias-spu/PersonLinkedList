@@ -22,10 +22,14 @@ PersonLinkedList::PersonLinkedList(){
 PersonLinkedList::~PersonLinkedList(){
 }
 size_t PersonLinkedList::LoadFromStream(istream& input){
-	return 0;
+	int personsRead = 0;
+
 }
 
-size_t PersonLinkedList::SaveToStream(ostream&)const{
+size_t PersonLinkedList::SaveToStream(ostream& output)const{
+	for (Node* tmp=_head; tmp != nullptr; tmp = tmp->next)
+		tmp->data->WriteToStream(output);
+	return _size;
 }
 bool PersonLinkedList::Insert(Person*, size_t){
 }
