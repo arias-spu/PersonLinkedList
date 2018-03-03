@@ -20,8 +20,11 @@ string Person::ToString()const{
 	retVal << setw(10) << _name << setw(6) << _age;
 	return retVal.str();
 }
-void Person::ReadFromStream(istream& input){
-	input >> _name >> _age;
+bool Person::ReadFromStream(istream& input){
+	if (input >> _name >> _age)
+		return true;
+	else
+		return false;
 }
 void Person::WriteToStream(ostream& output)const{
 	output << _name << " " << _age << endl;

@@ -24,7 +24,7 @@ public:
 	size_t LoadFromStream(istream&);
 	size_t SaveToStream(ostream&)const;
 	bool Insert(Person*, size_t);
-	bool Insert(const string&, size_t);
+	bool Insert(const string&, size_t, size_t);
 	Person* Get(size_t)const;
 	int IndexOf(const Person&)const;
 	bool Remove(size_t);

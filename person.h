@@ -13,7 +13,7 @@ public:
 	Person(const string&, size_t);
 	void IncreaseAge();
 	string ToString()const;
-	void ReadFromStream(istream&);
+	bool ReadFromStream(istream&);
 	void WriteToStream(ostream&)const;
 	bool Equals(const Person&);
 };
