@@ -10,7 +10,7 @@ personlist:	person.h personlinkedlist.h personlinkedlist.cpp
 main:	main.cpp person.h personlinkedlist.h
 	g++ -std=c++11 -c main.cpp
 
-unit:	unittest person personlinkedlist
+unit:	unittest person personlist
 	g++ -std=c++11 unittest.o person.o personlinkedlist.o -o unit
 
 unittest:	unittest.cpp person.h person.cpp

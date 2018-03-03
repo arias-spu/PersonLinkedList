@@ -81,7 +81,7 @@ Person* PersonLinkedList::Get(size_t position)const{
 	if (position >= _size)
 		return nullptr;
 	Node* tmp = _head;
-	for (size_t i=0; i<position-1; i++)
+	for (size_t i=0; i<position; i++)
 		tmp = tmp->next;
 	return tmp->data;
 }
