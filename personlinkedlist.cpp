@@ -7,6 +7,7 @@ using std::ostream;
 using std::istream;
 using std::string;
 using std::cerr;
+using std::endl;
 
 PersonLinkedList::PersonLinkedList(const PersonLinkedList& other){
 	_head = nullptr;
@@ -51,7 +52,7 @@ size_t PersonLinkedList::SaveToStream(ostream& output)const{
 	return _size;
 }
 bool PersonLinkedList::Insert(Person* person, size_t position){
-	if (position > size)
+	if (position > _size)
 		return false;
 	Node* neo = new Node;
 	neo->data = person;
